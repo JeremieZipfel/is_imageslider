@@ -9,7 +9,7 @@ use PrestaShop\PrestaShop\Core\Search\Filters;
 /**
  * Class ProductFilter proves default filters for our products grid
  */
-final class ImageSliderFileters extends Filters
+final class ImageSliderFilters extends Filters
 {
     /**
      * {@inheritdoc}

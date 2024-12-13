@@ -53,7 +53,7 @@ class ImageSliderInstaller
         $container = $this->getContainer();
 
         // THIS WAY INSTEAD OF SERVICE CALL COZ OF NOT AVAILABLE SERVICE DURING INSTALLATION
-        $createTableAction = new ActionDatabaseCrateTable(
+        $createTableAction = new ActionDatabaseCreateTable(
             $container->get('doctrine.dbal.default_connection'),
             $container->getParameter('database_prefix')
         );
@@ -94,7 +94,7 @@ class ImageSliderInstaller
     {
         $databaseData = $this->databaseYaml->getParsedFileData();
         $container = $this->getContainer();
-        $dropTableAction = $container->get('oksydan.is_imageslider.installer.action_databse_drop_table');
+        $dropTableAction = $container->get('oksydan.is_imageslider.installer.action_database_drop_table');
         $dropTableAction
             ->setData($databaseData)
             ->buildQuery();

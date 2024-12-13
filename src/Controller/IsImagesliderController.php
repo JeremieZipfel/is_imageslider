@@ -7,7 +7,7 @@ namespace Oksydan\IsImageslider\Controller;
 use Oksydan\IsImageslider\Cache\TemplateCache;
 use Oksydan\IsImageslider\Entity\ImageSlider;
 use Oksydan\IsImageslider\Exceptions\DateRangeNotValidException;
-use Oksydan\IsImageslider\Filter\ImageSliderFileters;
+use Oksydan\IsImageslider\Filter\ImageSliderFilters;
 use Oksydan\IsImageslider\Handler\FileEraser;
 use Oksydan\IsImageslider\Translations\TranslationDomains;
 use PrestaShop\PrestaShop\Core\Grid\Position\Exception\PositionDataException;
@@ -41,7 +41,7 @@ class IsImagesliderController extends FrameworkBundleAdminController
         $this->templateCache = $templateCache;
     }
 
-    public function index(ImageSliderFileters $filters): Response
+    public function index(ImageSliderFilters $filters): Response
     {
         $imageSliderGridFactory = $this->get('oksydan.is_imageslider.grid.image_slider_grid_factory');
         $imageSliderGrid = $imageSliderGridFactory->getGrid($filters);

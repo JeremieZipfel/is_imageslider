@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Oksydan\IsImageslider\Installer;
 
-class ActionDatabaseCrateTable extends ActionDatabaseAbstract implements ActionDatabaseInterface
+class ActionDatabaseCreateTable extends ActionDatabaseAbstract implements ActionDatabaseInterface
 {
     public const defaultEngine = 'InnoDb';
     public const defaultCharset = 'UTF8';
@@ -47,9 +47,9 @@ class ActionDatabaseCrateTable extends ActionDatabaseAbstract implements ActionD
 
         $dbQuery .= ')';
 
-        $dbQuery .= ' ENGINE = ' . (!empty($table['engine']) ? $table['engine'] : ActionDatabaseCrateTable::defaultEngine);
+        $dbQuery .= ' ENGINE = ' . (!empty($table['engine']) ? $table['engine'] : ActionDatabaseCreateTable::defaultEngine);
 
-        $dbQuery .= ' DEFAULT CHARACTER SET ' . (!empty($table['charset']) ? $table['charset'] : ActionDatabaseCrateTable::defaultCharset);
+        $dbQuery .= ' DEFAULT CHARACTER SET ' . (!empty($table['charset']) ? $table['charset'] : ActionDatabaseCreateTable::defaultCharset);
 
         return $dbQuery;
     }

@@ -33,17 +33,17 @@ services:
     arguments:
       - '@oksydan.is_imageslider.module'
 
-  oksydan.is_imageslider.installer.action_databse_create_table:
-    class: 'Oksydan\IsImageslider\Installer\ActionDatabaseCrateTable'
-    parent: 'oksydan.is_imageslider.installer.abstract_action_databse'
+  oksydan.is_imageslider.installer.action_database_create_table:
+    class: 'Oksydan\IsImageslider\Installer\ActionDatabaseCreateTable'
+    parent: 'oksydan.is_imageslider.installer.abstract_action_database'
     public: true
 
-  oksydan.is_imageslider.installer.action_databse_drop_table:
+  oksydan.is_imageslider.installer.action_database_drop_table:
     class: 'Oksydan\IsImageslider\Installer\ActionDatabaseDropTable'
-    parent: 'oksydan.is_imageslider.installer.abstract_action_databse'
+    parent: 'oksydan.is_imageslider.installer.abstract_action_database'
     public: true
 
-  oksydan.is_imageslider.installer.abstract_action_databse:
+  oksydan.is_imageslider.installer.abstract_action_database:
     class: 'Oksydan\IsImageslider\Installer\ActionDatabaseAbstract'
     abstract: true
     arguments:
